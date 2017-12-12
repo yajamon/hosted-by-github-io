@@ -4,9 +4,33 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>resizeとchangeOrientationを吐き出すだけ</title>
+        <style>
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: light-gray;
+}
+#print {
+    height: 100%;
+}
+        </style>
     </head>
-    <body style="height:100%;background-color:light-gray">
-        <h1>resizeとchangeOrientationを吐き出すだけ</h1>
-        <div id="print" style="width:100%;background-color:white;border:solid 1px black"></div>
+    <body style="height:100%;">
+        <div id="print" style="width:100%;height:100%background-color:white;border:solid 1px black"></div>
+        <script>
+function createNodesBy(text) {
+    return text.split("\n").map((line) => {document.createTextNode(line)});
+}
+function put(text){
+    var target = document.getElementById("print").
+    createNodesBy(text).forEach((current)=>{
+        target.appendChild(current);
+        target.appendChild(document.createElement("BR"));
+    });
+}
+put("リサイズしたり、端末を回転させたりすると情報が出力されます。");
+        </script>
     </body>
 </html>
