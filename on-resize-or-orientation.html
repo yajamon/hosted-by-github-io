@@ -7,13 +7,16 @@
         <style>
 html {
     height: 100%;
+    margin: 0;
 }
 body {
     height: 100%;
     background-color: light-gray;
+    margin: 0;
 }
 #print {
     height: 100%;
+    overflow: scroll;
 }
         </style>
     </head>
@@ -24,7 +27,7 @@ function createNodesBy(text) {
     return text.split("\n").map((line) => {document.createTextNode(line)});
 }
 function put(text){
-    var target = document.getElementById("print").
+    var target = document.getElementById("print");
     createNodesBy(text).forEach((current)=>{
         target.appendChild(current);
         target.appendChild(document.createElement("BR"));
