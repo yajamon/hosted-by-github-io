@@ -33,8 +33,9 @@ function put(text){
         target.appendChild(document.createElement("BR"));
     });
 }
-function printWindowSize(){
-    put("Width: " + window.innerWidth.toString() + " Height: "+ window.innerHeight);
+function printWindowSize(event){
+
+    put("EventType: " + event.type + " Width: " + window.innerWidth.toString() + " Height: "+ window.innerHeight);
 }
 window.addEventListener("DOMContentLoaded", function(){
     window.addEventListener("resize", printWindowSize);
