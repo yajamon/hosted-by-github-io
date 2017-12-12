@@ -24,7 +24,7 @@ body {
         <div id="print" style="width:100%;height:100%background-color:white;border:solid 1px black"></div>
         <script>
 function createNodesBy(text) {
-    return text.split("\n").map((line) => {document.createTextNode(line)});
+    return text.split("\n").map((line) => document.createTextNode(line));
 }
 function put(text){
     var target = document.getElementById("print");
