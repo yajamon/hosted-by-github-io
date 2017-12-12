@@ -15,7 +15,7 @@ body {
     margin: 0;
 }
 #print {
-    height: 100%;
+    height: 90%;
     overflow: scroll;
 }
         </style>
@@ -33,6 +33,11 @@ function put(text){
         target.appendChild(document.createElement("BR"));
     });
 }
+window.addEventListener("DOMContentLoaded", function(){
+    window.addEventListener("resize orientationchange", function(){
+        put("Width: " + window.innerWidth.toString() + " Height: "+ window.innerHeight);
+    });
+});
 put("リサイズしたり、端末を回転させたりすると情報が出力されます。");
         </script>
     </body>
