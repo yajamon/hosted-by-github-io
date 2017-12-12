@@ -33,10 +33,12 @@ function put(text){
         target.appendChild(document.createElement("BR"));
     });
 }
+function printWindowSize(){
+    put("Width: " + window.innerWidth.toString() + " Height: "+ window.innerHeight);
+}
 window.addEventListener("DOMContentLoaded", function(){
-    window.addEventListener("resize orientationchange", function(){
-        put("Width: " + window.innerWidth.toString() + " Height: "+ window.innerHeight);
-    });
+    window.addEventListener("resize", printWindowSize);
+    window.addEventListener("orientationchange", printWindowSize);
 });
 put("リサイズしたり、端末を回転させたりすると情報が出力されます。");
         </script>
