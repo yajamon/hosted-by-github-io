@@ -18,12 +18,26 @@ body {
     </head>
     <body style="height:100%;">
         <textarea id="raw"></textarea>
-        <input type="button" id="change" value="変換" />
+        <input type="button" id="encode" value="エンコード" />
+        <input type="button" id="decode" value="デコード" />
         <textarea id="encoded"></textarea>
         <script>
-            document.getElementById("change").addEventListener("click", function(){
-                document.getElementById("encoded").value =
-                    encodeURIComponent( document.getElementById("raw").value);
+            function derive(from, to, component){
+                to.value = component(from.value);
+            }
+            document.getElementById("encode").addEventListener("click", function(){
+                derive(
+                    document.getElementById("encoded"),
+                    document.getElementById("raw")
+                    encodeURIComponent
+                );
+            });
+            document.getElementById("decode").addEventListener("click", function(){
+                derive(
+                    document.getElementById("raw")
+                    document.getElementById("encoded"),
+                    decodeURIComponent
+                );
             });
 
         </script>
