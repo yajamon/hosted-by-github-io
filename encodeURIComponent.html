@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>resizeとchangeOrientationを吐き出すだけ</title>
+        <style>
+html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    height: 100%;
+    background-color: light-gray;
+    margin: 0;
+}
+        </style>
+    </head>
+    <body style="height:100%;">
+        <textarea id="raw"></textarea>
+        <input type="button" id="change" value="変換" />
+        <textarea id="encoded"></textarea>
+        <script>
+            document.getElementById("change").addEventListener("click", function(){
+                document.getElementById("encoded").value =
+                    encodeURIComponent( document.getElementById("raw").value);
+            });
+
+        </script>
+    </body>
+</html>
