@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>縦書きジェネレーター</title>
+        <style>
+body {
+    background-color: lightgray;
+}
+textarea {
+    font-family: monospace;
+}
+        </style>
+    </head>
+    <body>
+        <div>
+            <textarea id="in" cols="50" rows="6"></textarea>
+        </div>
+        <div>
+            <button id="convert_button">変換</button>
+        </div>
+        <div>
+            <textarea id="out" cols="12" rows="25"></textarea>
+        </div>
+        <script>
+            const convert_button = document.getElementById("convert_button");
+            convert_button.addEventListener("click", () => {
+                const in_textarea = document.getElementById("in");
+                const out_textarea = document.getElementById("out");
+
+                let filtered = in_textarea.value;
+                out_textarea.value = filtered;
+                console.log("convert");
+            });
+        </script>
+    </body>
+</html>
