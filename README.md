@@ -7,5 +7,6 @@ https://yajamon.github.io/hosted-by-github-io/
 
 ## Containts
 
-- [resizeとchangeOrientationでevent発火](./on-resize-or-orientation.html)
 - [encodeURIComponent](./encodeURIComponent.html)
+- [resizeとchangeOrientationを吐き出すだけ](./on-resize-or-orientation.html)
+- [縦書きジェネレーター](./convert-to-vertical.html)
