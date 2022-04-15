@@ -28,7 +28,7 @@ textarea {
              * @param {string} s
              * @return {string}
              */
-            const trimEachLine = (s) => {
+            const trimEndEachLine = (s) => {
                 return s.split("\n")
                     .map( (line) => line.trimEnd() )
                     .join("\n");
@@ -62,7 +62,7 @@ textarea {
 
                 let filters = [];
                 filters.push(swapAxis);
-                filters.push(trimEachLine);
+                filters.push(trimEndEachLine);
 
                 let filtered = filters.reduce((s, filter) => filter(s), in_textarea.value);
                 out_textarea.value = filtered;
