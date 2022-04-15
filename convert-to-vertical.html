@@ -28,6 +28,16 @@ textarea {
              * @param {string} s
              * @return {string}
              */
+            const trimEachLine = (s) => {
+                return s.split("\n")
+                    .map( (line) => line.trimEnd() )
+                    .join("\n");
+            }
+
+            /**
+             * @param {string} s
+             * @return {string}
+             */
             const swapAxis = (s) => {
                 const sp = "　";
                 const chars = s.split("\n").map((l) => l.split("")).reverse();
@@ -52,6 +62,8 @@ textarea {
 
                 let filters = [];
                 filters.push(swapAxis);
+                filters.push(trimEachLine);
+
                 let filtered = filters.reduce((s, filter) => filter(s), in_textarea.value);
                 out_textarea.value = filtered;
                 console.log("convert");
