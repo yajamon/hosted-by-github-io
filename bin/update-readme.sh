@@ -24,3 +24,19 @@ EOT
     done
 } >> $TARGET
 
+cat << 'EOT' >> $TARGET
+
+## How to start
+
+### New
+
+```console
+./bin/new.sh new-tool-name
+```
+
+### Update README.md
+
+```console
+./bin/update-readme.sh
+```
+EOT
