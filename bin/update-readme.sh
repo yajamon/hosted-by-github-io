@@ -15,9 +15,12 @@ https://yajamon.github.io/hosted-by-github-io/
 
 EOT
 
-for p in $(find . -name 'index.html' | sort)
-do
-    title=$(grep -m 1 'title' "$p" | perl -pE 's/.*<title>(.*)<\/title>.*/$1/')
+{
+    for p in $(find . -name 'index.html' | sort)
+    do
+        title=$(grep -m 1 'title' "$p" | perl -pE 's/.*<title>(.*)<\/title>.*/$1/')
 
-    echo "- [$title]($p)" >> $TARGET
-done
+        echo "- [$title]($p)"
+    done
+} >> $TARGET
+
