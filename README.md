@@ -7,6 +7,6 @@ https://yajamon.github.io/hosted-by-github-io/
 
 ## Containts
 
-- [encodeURIComponent](./encodeURIComponent.html)
-- [resizeとchangeOrientationを吐き出すだけ](./on-resize-or-orientation.html)
-- [縦書きジェネレーター](./convert-to-vertical.html)
+- [縦書きジェネレーター](./convert-to-vertical/index.html)
+- [encodeURIComponent](./encodeURIComponent/index.html)
+- [resizeとchangeOrientationを吐き出すだけ](./on-resize-or-orientation/index.html)
