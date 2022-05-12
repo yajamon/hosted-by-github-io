@@ -15,7 +15,7 @@ https://yajamon.github.io/hosted-by-github-io/
 
 EOT
 
-for p in $(find . -name '*.html')
+for p in $(find . -name 'index.html' | sort)
 do
     title=$(grep -m 1 'title' "$p" | perl -pE 's/.*<title>(.*)<\/title>.*/$1/')
 
