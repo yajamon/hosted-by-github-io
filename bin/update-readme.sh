@@ -3,7 +3,7 @@
 readonly REPO_ROOT=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd)
 readonly TARGET=$REPO_ROOT/README.md
 
-cat << EOT > $TARGET
+cat << 'EOT' > $TARGET
 # hosted-by-github-io
 ちょろっと書いた即席ツールとか
 
