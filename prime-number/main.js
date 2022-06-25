@@ -10,6 +10,11 @@ input.addEventListener("change", () => {
   }
 });
 
+/**
+ * 素数判定スクリプト
+ * @param {number} value 素数判定したい数値。0以上の整数を期待する。
+ * @return {boolean} 素数であれば `true`。
+ */
 function isPrimeNumber(value) {
   if (value < 2) {
     return false;
