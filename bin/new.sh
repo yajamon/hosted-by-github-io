@@ -32,6 +32,8 @@ cat << EOT > "$TARGET/index.html"
     </head>
     <body>
 
+        <hr />
+        <a href="https://yajamon.github.io/hosted-by-github-io/">TOP</a>
     </body>
 </html>
 EOT
