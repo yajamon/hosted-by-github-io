@@ -11,6 +11,9 @@ input.addEventListener("change", () => {
 });
 
 function isPrimeNumber(value) {
+  if (value < 2) {
+    return false;
+  }
   let element = 2;
   while (element * element <= value) {
     if (value % element === 0) {
